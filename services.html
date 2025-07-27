@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - TibetStartup!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .services-hero {
+            padding: 80px 20px;
+            text-align: left;
+            background-color: #2a2a2a;
+        }
+
+        .services-hero .container {
+            max-width: 1200px;
+        }
+
+        .services-hero-image {
+            margin: 3rem 0;
+        }
+
+        .services-hero-image img {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .services-grid-section {
+            padding: 80px 0;
+            background-color: #2a2a2a;
+        }
+
+        .services-detailed {
+            display: grid;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .service-detail {
+            background-color: #1a1a1a;
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 5px solid #fe292a;
+        }
+
+        .service-detail h3 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .service-detail p {
+            color: #cccccc;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            margin-top: 2rem;
+        }
+
+        .service-features h4 {
+            color: #fe292a;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .service-features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-features li {
+            color: #cccccc;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #fe292a;
+            font-weight: bold;
+        }
+
+        .services-cta {
+            background-color: #fe292a;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .services-cta h2 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .services-cta p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        @media (max-width: 768px) {
+            .service-detail {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-overlay" id="loader">
+        <div class="loader">
+            <span class="loader-text">loading</span>
+            <span class="load"></span>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="img/TibetStartup! logo fo dark BG.png" alt="TibetStartup!" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="programmes.html" class="nav-link">Programmes</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Services Hero -->
+        <section class="services-hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    We sit at the intersection of your idea and a 
+                    successful business.
+                </h1>
+                <div class="services-hero-image">
+                    <img src="img/business interaction.jpg" alt="Business interaction">
+                </div>
+                <p class="hero-description">
+                    Make it stand out. It all begins with an idea 💡. Here are just a 
+                    few of the services we provide for your business.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services-grid-section">
+            <div class="container">
+                <div class="services-detailed">
+                    <div class="service-detail">
+                        <h3>Business Plan Development</h3>
+                        <p>Every successful venture starts with a spark—an idea. Perhaps you aim to launch a business, transform a passion into a viable endeavor, or share your creativity with the world. Whatever your goal, having a clear and focused vision is the foundation of success. Taking the time to refine your idea and map out your objectives will set you on the path to achieving your aspirations.</p>
+                        <div class="service-features">
+                            <h4>What we provide:</h4>
+                            <ul>
+                                <li>Comprehensive business plan creation</li>
+                                <li>Market research and analysis</li>
+                                <li>Financial projections and modeling</li>
+                                <li>Competitive analysis</li>
+                                <li>Strategic roadmap development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="service-detail">
+                        <h3>Legal Support</h3>
+                        <p>Let us handle the complexities for you. From registering your business to managing the complicated legal processes, we take care of it all so you don't have to. Focus on growing your vision while we manage the details.</p>
+                        <div class="service-features">
+                            <h4>Our legal services include:</h4>
+                            <ul>
+                                <li>Business registration and incorporation</li>
+                                <li>Legal compliance and documentation</li>
+                                <li>Contract drafting and review</li>
+                                <li>Intellectual property protection</li>
+                                <li>Regulatory compliance guidance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="service-detail">
+                        <h3>Branding & Marketing</h3>
+                        <p>Did you know that over 2.7 billion people shop online? We specialize in (re)branding and marketing to help you connect with a global audience. Using cutting-edge technology and innovative strategies, we ensure your business stands out and reaches its full potential.</p>
+                        <div class="service-features">
+                            <h4>Marketing solutions:</h4>
+                            <ul>
+                                <li>Brand identity development</li>
+                                <li>Website design and development</li>
+                                <li>Social media marketing</li>
+                                <li>Digital advertising campaigns</li>
+                                <li>Content marketing strategy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="service-detail">
+                        <h3>Investment & Fundraising</h3>
+                        <p>Curious about how investment and fundraising work? We're here to guide you every step of the way—helping your business become investment-ready and successfully secure the funds it needs to grow.</p>
+                        <div class="service-features">
+                            <h4>Fundraising support:</h4>
+                            <ul>
+                                <li>Investment readiness assessment</li>
+                                <li>Pitch deck development</li>
+                                <li>Investor network connections</li>
+                                <li>Due diligence preparation</li>
+                                <li>Funding strategy development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="service-detail">
+                        <h3>Data & Analytics</h3>
+                        <p>We provide data-driven recommendations to help your business grow and stay ahead of the competition. With our insights, you'll always have a clear strategy to guide your success.</p>
+                        <div class="service-features">
+                            <h4>Analytics services:</h4>
+                            <ul>
+                                <li>Business intelligence setup</li>
+                                <li>Performance tracking and KPI monitoring</li>
+                                <li>Market trend analysis</li>
+                                <li>Customer behavior insights</li>
+                                <li>Growth optimization strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services CTA -->
+        <section class="services-cta">
+            <div class="container">
+                <h2>Ready to transform your idea into reality?</h2>
+                <p>Let's work together to build something amazing. Our comprehensive services are designed to support you at every stage of your entrepreneurial journey.</p>
+                <a href="contact.html" class="cta-button">Get Started Today</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="img/TibetStartup! logo fo ligh BG.png" alt="TibetStartup!" class="logo">
+                    </a>
+                    <p class="footer-description">
+                        TibetStartup! is the non-profit arm of Norzin Consultancy, dedicated to empowering Tibetan entrepreneurs and strengthening the Tibetan start-up ecosystem. Its vision is rooted in fostering economic self-reliance within the Tibetan community, recognizing that a thriving entrepreneurial landscape is vital for the sustainability of the Tibetan movement.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <p>contact@tibetlstartup.com</p>
+                        <h4>Address</h4>
+                        <p>Dharamshala - 176215</p>
+                        <p>Himachal Pradesh, IN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

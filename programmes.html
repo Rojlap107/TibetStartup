@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmes - TibetStartup!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .programmes-hero {
+            padding: 80px 20px 60px;
+            background-color: #2a2a2a;
+        }
+
+        .programme-card {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            gap: 0;
+        }
+
+        .programme-visual {
+            background: url('img/TibetStartup! Banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            border-radius: 15px 0 0 15px;
+        }
+
+
+        .programme-content {
+            padding: 3rem;
+        }
+
+        .programme-title {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .programme-date {
+            color: #fe292a;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .programme-description {
+            color: #cccccc;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .programme-link {
+            color: #fe292a;
+            text-decoration: none;
+            font-weight: 500;
+            border: 2px solid #fe292a;
+            padding: 10px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .programme-link:hover {
+            background-color: #fe292a;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .programme-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .programme-visual,
+            .programme-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-overlay" id="loader">
+        <div class="loader">
+            <span class="loader-text">loading</span>
+            <span class="load"></span>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="img/TibetStartup! logo fo dark BG.png" alt="TibetStartup!" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="programmes.html" class="nav-link active">Programmes</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="programmes-hero">
+            <div class="container">
+                <h1 class="section-title">Our Programmes</h1>
+                <p class="hero-description">Comprehensive programs designed to support and accelerate Tibetan entrepreneurship at every stage of the journey.</p>
+            </div>
+        </section>
+
+        <section class="programmes-list">
+            <div class="container">
+                <div class="programme-card">
+                    <div class="programme-visual">
+                    </div>
+                    <div class="programme-content">
+                        <h2 class="programme-title">Tibetan Enterprise Digitization Support Program (TEDSP)</h2>
+                        <div class="programme-date">Thu, May 15, 2025, 10:30 PM – Wed, Dec 31, 2025, 11:30 PM</div>
+                        <p class="programme-description">
+                            It all begins with an idea - maybe you want to launch a business, turn a hobby into something more, or share a creative project with the world. Whatever it is, the way you tell your story online can make all the difference.
+                        </p>
+                        <a href="programme-detail.html?id=tedsp" class="programme-link">View Event →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="img/TibetStartup! logo fo ligh BG.png" alt="TibetStartup!" class="logo">
+                    </a>
+                    <p class="footer-description">
+                        TibetStartup! is the non-profit arm of Norzin Consultancy, dedicated to empowering Tibetan entrepreneurs and strengthening the Tibetan start-up ecosystem. Its vision is rooted in fostering economic self-reliance within the Tibetan community, recognizing that a thriving entrepreneurial landscape is vital for the sustainability of the Tibetan movement.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <p>contact@tibetlstartup.com</p>
+                        <h4>Address</h4>
+                        <p>Dharamshala - 176215</p>
+                        <p>Himachal Pradesh, IN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/programmes.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Load programmes list when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const programmes = getAllProgrammes();
+            const programmesList = document.querySelector('.programmes-list .container');
+            
+            if (programmesList && programmes.length > 0) {
+                // Clear existing content
+                programmesList.innerHTML = '';
+                
+                // Generate programme cards
+                programmes.forEach(programme => {
+                    const programmeCard = `
+                        <div class="programme-card">
+                            <div class="programme-visual" style="background-image: url('${programme.image}');">
+                            </div>
+                            <div class="programme-content">
+                                <h2 class="programme-title">${programme.title}</h2>
+                                <div class="programme-date">${programme.shortDate}</div>
+                                <p class="programme-description">
+                                    ${programme.description}
+                                </p>
+                                <a href="programme-detail.html?id=${programme.id}" class="programme-link">View Event →</a>
+                            </div>
+                        </div>
+                    `;
+                    programmesList.innerHTML += programmeCard;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
